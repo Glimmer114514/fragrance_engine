@@ -23,10 +23,6 @@
 
 <br />
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/placeholder" width="720" alt="screenshot" />
-</p>
-
 <br />
 
 ---
