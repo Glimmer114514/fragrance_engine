@@ -1,146 +1,200 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" />
-    <img alt="Fragrance" src="https://img.shields.io/badge/Fragrance-Engine-c2936c?style=for-the-badge&logo=hackthebox&logoColor=white" />
-  </picture>
+<div align="center">
+
+<img src="assets/banner.jpg" width="760" alt="Fragrance Engine" />
+
+<br />
+<br />
+
+<p>
+  <sub>
+    <samp>✦·˚ ༘</samp>
+    &nbsp; 一款轻量、可高度定制的视觉小说引擎 &nbsp;
+    <samp>·˚ ༘ ✦</samp>
+  </sub>
 </p>
 
-<p align="center">
-  <samp>一款轻量、可高度定制的视觉小说引擎 &nbsp;·&nbsp; Electron + React + TypeScript + Zustand</samp>
+<p>
+  <sup>Electron · React 18 · TypeScript · Zustand</sup>
 </p>
 
-<p align="center">
+<p>
   <a href="https://github.com/Glimmer114514/fragrance_engine/blob/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-c2936c?style=flat-square" />
+    <img alt="License" src="https://img.shields.io/badge/🌸_MIT_License-c2936c?style=flat-square&labelColor=faf5f0" />
   </a>
   <a href="#">
-    <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-8b7a6b?style=flat-square" />
+    <img alt="Version" src="https://img.shields.io/badge/ver-1.0.0-e8c4a0?style=flat-square&labelColor=faf5f0" />
   </a>
   <a href="#">
-    <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-a89f91?style=flat-square" />
+    <img alt="Platform" src="https://img.shields.io/badge/Win_|_Mac_|_Linux-d4b896?style=flat-square&labelColor=faf5f0" />
+  </a>
+  <a href="#">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Glimmer114514/fragrance_engine?style=flat-square&color=f0d8c0&labelColor=faf5f0" />
   </a>
 </p>
+
+<br />
+
+<p>
+  <samp>₊˚ʚ 🎀 在花瓣与光影之间，写下属于你的故事 🎀 ɞ˚₊</samp>
+</p>
+
+</div>
+
+<br />
+
+---
+
+<br />
+
+<div align="center">
+
+## <samp>₊✧ 关于 Fragrance ✧₊</samp>
+
+</div>
 
 <br />
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/placeholder" width="720" alt="screenshot" />
+  <samp>
+    如果你有一个想讲的故事，但不想学 Python DSL，<br />
+    也不想安装笨重的 Unity 编辑器 ——<br />
+    <b>Fragrance</b> 就是为你准备的。
+  </samp>
 </p>
+
+<p align="center">
+  <samp>
+    用 <b>JSON 写剧本</b>，用 <b>CSS 做皮肤</b>，<br />
+    剩下的交给引擎。
+  </samp>
+</p>
+
+<br />
+
+<div align="center">
+
+| 🎀 | |
+|:-:|:-|
+| 🎭 **剧本驱动** | JSON 剧本：`dialogue` · `narration` · `choice` · `branch` |
+| 🎨 **完全可定制** | React 组件 + CSS 变量，换主题只需改色盘 |
+| 💾 **10 槽存档** | IPC 文件存储 + `localStorage` 回退 |
+| 🔁 **二周目** | 通关自动解锁隐藏路线 💫 |
+| ⚙️ **游戏内设置** | 文字速度 · 自动播放 · 音量 · 全屏 |
+| 📦 **一键打包** | `npm run package` → 一个 `.exe` |
+
+</div>
 
 <br />
 
 ---
 
-## ✦ 简介
+<br />
 
-**Fragrance** 是一个面向创作者的轻量视觉小说引擎。
+<div align="center">
 
-它不需要你学习 Ren'Py 的 Python DSL，也不需要安装笨重的 Unity 编辑器——如果你会写 **JSON** 和一点点 **HTML/CSS**，你就可以用它创造出独属于你的故事。
+## <samp>🌸 快速开始</samp>
 
-暖色调文艺风格的 UI、花瓣飘落的标题画面、浮动卡片的对话框……一切视觉元素都可以通过 CSS 完全自定义。引擎本身只做一件事：解释你的剧本，呈现在屏幕上。
+</div>
 
-| | |
-|------|---|
-| 🎭 **剧本驱动** | 用 JSON 编写剧本，`dialogue` / `narration` / `choice` / `branch` 一站搞定 |
-| 🎨 **完全可定制** | 所有 UI 都是 React 组件，通过 CSS 变量控制主题色 |
-| 💾 **10 槽存档** | IPC 文件存储 + localStorage 回退，跨平台兼容 |
-| 🔁 **二周目系统** | 通关后自动解锁隐藏路线 |
-| ⚙️ **游戏内设置** | 文字速度、自动播放、音量、全屏——全部可调 |
-| 📦 **一键打包** | `npm run package` → 一个 .exe 安装包 |
-
----
-
-## ✦ 快速开始
+<br />
 
 ```bash
-# 克隆仓库
+# ๑ 领养一只 Fragrance
 git clone https://github.com/Glimmer114514/fragrance_engine.git
 cd fragrance_engine
 
-# 安装依赖
+# ๑ 去商店买猫粮（安装依赖）
 npm install
 
-# 启动开发服务器（Windows 也可双击 dev.bat）
+# ๑ 对小猫咪说 "启动！"（Windows 可双击 dev.bat）
 npm run dev
 
-# 打包为 Windows 安装包
+# ๑ 打包成便携猫箱（安装包）
 npm run package
 ```
 
-> **环境要求：** Node.js 18+ · npm 9+
+<div align="center">
+  <p>
+    <samp>
+      <sup>✦ 需要 Node.js 18+ &nbsp;·&nbsp; npm 9+ ✦</sup>
+    </samp>
+  </p>
+</div>
+
+<br />
 
 ---
 
-## ✦ 项目结构
+<br />
 
-```
-fragrance_engine/
-│
-├── electron/                     # Electron 主进程
-│   ├── main/index.ts             # 窗口创建、IPC 存档
-│   └── preload/index.ts          # 安全暴露 API
-│
-├── src/                          # React 渲染进程
-│   ├── engine/                   # 核心引擎
-│   │   ├── types.ts              # 指令类型定义
-│   │   └── ScriptEngine.ts       # 指令执行 & 条件求值
-│   ├── stores/                   # Zustand 状态
-│   │   ├── gameStore.ts          # 游戏运行时状态
-│   │   └── settingsStore.ts      # 用户设置（持久化）
-│   ├── services/                 # 服务层
-│   │   ├── SaveManager.ts        # 存档 IO
-│   │   └── ResourceManager.ts    # 资源路径
-│   ├── components/               # UI 组件
-│   │   ├── GameScreen.tsx        # 主舞台 & 路由
-│   │   ├── TitleScreen.tsx       # 标题画面（花瓣动画）
-│   │   ├── DialogueBox.tsx       # 对话框
-│   │   ├── ChoicePanel.tsx       # 分支选项
-│   │   ├── PauseMenu.tsx         # 暂停菜单
-│   │   ├── SettingsPanel.tsx     # 设置面板
-│   │   └── ...
-│   └── assets/styles/global.css  # 全局样式
-│
-├── resources/scripts/            # 剧本 JSON
-├── dev.bat                       # 一键启动
-└── 使用手册.md                    # 中文手册
-```
+<div align="center">
 
----
+## <samp>📜 最早的一份剧本</samp>
 
-## ✦ 剧本编写
+</div>
 
-剧本是一个 JSON 数组。引擎按顺序解释指令，遇到对话/旁白/选项时暂停等待玩家交互。
+<br />
 
-### 一个最小的剧本
+<p align="center">
+  <samp>一个 JSON 数组，引擎逐条念给你听。</samp>
+  <br />
+  <samp><sub>遇到对话 / 旁白 / 选项时会停下来，等你轻轻点一下。</sub></samp>
+</p>
 
 ```json
 [
-  { "type": "scene", "id": "start" },
-  { "type": "bg",  "src": "classroom", "effect": "fade" },
-  { "type": "bgm", "src": "daily", "loop": true, "volume": 0.6 },
-  { "type": "char", "id": "heroine", "pose": "normal", "pos": "center" },
-  { "type": "dialogue", "speaker": "女主角", "text": "你来了。" },
+  { "type": "scene",  "id": "start" },
+
+  { "type": "bg",  "src": "classroom",   "effect": "fade" },
+  { "type": "bgm", "src": "afternoon",   "loop": true, "volume": 0.6 },
+  { "type": "char", "id": "sakura",      "pose": "shy", "pos": "center" },
+
+  { "type": "dialogue", "speaker": "小樱", "text": "……你来了。" },
   { "type": "narration", "text": "她的声音很轻，像落在水面上的花瓣。" },
+
   { "type": "end" }
 ]
 ```
 
-### 支持的全部指令
+<br />
 
-| 类型 | 指令 | 说明 |
-|------|------|------|
-| 场景 | `scene` / `end` | 场景标记（跳转锚点）/ 结束返回标题 |
-| 视觉 | `bg` / `char` / `cg` | 背景 / 立绘 / 全屏插画 |
-| 文本 | `dialogue` / `narration` | 对话 / 旁白（阻塞指令） |
-| 流程 | `choice` / `jump` / `branch` / `setFlag` / `wait` | 分支 / 跳转 / 条件 / 变量 / 等待 |
-| 音频 | `bgm` / `sfx` | 背景音乐 / 音效 |
+<details>
+<summary><samp>🌸 点击展开全部指令速查表</samp></summary>
 
-### 分支选项示例
+<br />
+
+| 分类 | 指令 | 说明 |
+|:--|:--|:--|
+| 🏷️ 场景 | `scene` · `end` | 场景标记（跳转锚点）· 结束返回标题 |
+| 🖼️ 视觉 | `bg` · `char` · `cg` | 背景 · 角色立绘 · 全屏插画 |
+| 💬 文本 | `dialogue` · `narration` | 对话 · 旁白（阻塞指令） |
+| 🔀 流程 | `choice` · `jump` · `branch` · `setFlag` · `wait` | 分支 · 跳转 · 条件 · 变量 · 等待 |
+| 🎵 音频 | `bgm` · `sfx` | 背景音乐 · 音效 |
+
+</details>
+
+<br />
+
+---
+
+<br />
+
+<div align="center">
+
+## <samp>💕 写出爱与选择</samp>
+
+</div>
+
+<br />
+
+<p align="center">
+  <samp>每个选项都可以改变好感度，也可以被 <b>cond</b> 魔法般地隐藏。</samp>
+</p>
 
 ```json
 {
   "type": "choice",
-  "prompt": "要怎么回应她？",
+  "prompt": "要怎么回应她的期待？",
   "options": [
     {
       "text": "握住她的手",
@@ -148,7 +202,7 @@ fragrance_engine/
       "setFlag": { "affection": 2 }
     },
     {
-      "text": "假装没看到，低头继续看书",
+      "text": "假装没看到，低头翻书",
       "next": { "type": "jump", "target": "ignore" },
       "setFlag": { "affection": -1 }
     },
@@ -161,61 +215,175 @@ fragrance_engine/
 }
 ```
 
-### 条件表达式
+<div align="center">
+  <samp><sub>✦ 选项 ✦ 好感度 ✦ 条件隐藏 ✦ 多结局 ✦</sub></samp>
+</div>
 
-```js
-"flags.affection >= 5"                     // 数值比较
-"flags.met_her && !flags.already_told"     // 逻辑组合
-"flags.week2 && flags.affection >= 12"     // 二周目隐藏路线
-```
-
-> 基于 `new Function()` 动态求值，支持标准 JavaScript 运算符。
+<br />
 
 ---
 
-## ✦ 键盘快捷键
+<br />
 
-| 场景 | 按键 | 动作 |
-|------|------|------|
-| 标题画面 | `Enter` | 开始新游戏 |
-| 标题画面 | `Esc` | 退出应用 |
-| 游戏中 | `Esc` | 暂停菜单 |
-| 任意菜单 | `Esc` | 返回上一层 |
+<div align="center">
 
----
+## <samp>🍰 项目结构小蛋糕</samp>
 
-## ✦ 技术架构
+</div>
+
+<br />
 
 ```
-剧本 JSON ──▶ ScriptEngine ──▶ Zustand Store ◀── React 组件
-                                     │
-                              SaveManager (IPC)
-                                     │
-                              本地文件系统
+fragrance_engine/
+│
+├── electron/                          # 🖥️ Electron 主进程
+│   ├── main/index.ts                  # 窗口 · IPC 存档
+│   └── preload/index.ts               # 安全的桥
+│
+├── src/                               # 🎮 React 渲染进程
+│   ├── engine/                        # ⚙️ 核心引擎
+│   │   ├── types.ts                   # 指令类型定义
+│   │   └── ScriptEngine.ts            # 解释器 & 条件求值
+│   ├── stores/                        # 🧠 状态管理
+│   │   ├── gameStore.ts               # 游戏运行时
+│   │   └── settingsStore.ts           # 设置（持久化）
+│   ├── components/                    # 🎨 UI 组件
+│   │   ├── GameScreen.tsx             # 🏠 主舞台 & 路由
+│   │   ├── TitleScreen.tsx            # 🌸 花瓣标题画面
+│   │   ├── DialogueBox.tsx            # 💬 对话卡片
+│   │   ├── ChoicePanel.tsx            # 🔀 选择面板
+│   │   ├── PauseMenu.tsx              # ⏸️ 暂停菜单
+│   │   └── SettingsPanel.tsx          # ⚙️ 设置
+│   └── assets/styles/global.css       # 🎀 主题色盘
+│
+├── resources/scripts/                 # 📜 剧本 JSON
+├── dev.bat                            # 🚀 一键启动
+└── 使用手册.md                         # 📖 中文指南
 ```
 
-**阻塞执行模型：** 引擎对非阻塞指令一口气执行到底（批量 bg/char/setFlag 不会卡顿），遇到 `dialogue`/`narration`/`choice`/`end` 时停下等待交互。
-
-**双 Store 设计：**
-- `gameStore` — 运行时状态：phase、characters、dialogue、flags、cursor
-- `settingsStore` — 持久化设置：音量、速度、全屏（带版本号自动重置）
+<br />
 
 ---
 
-## ✦ Star 历史
+<br />
 
-<p align="center">
-  <a href="https://github.com/Glimmer114514/fragrance_engine/stargazers">
-    <img src="https://img.shields.io/github/stars/Glimmer114514/fragrance_engine?style=social" alt="stars" />
-  </a>
-</p>
+<div align="center">
+
+## <samp>⌨️ 键盘魔法</samp>
+
+</div>
+
+<br />
+
+<table align="center">
+  <tr>
+    <td align="right"><samp>标题画面</samp></td>
+    <td><kbd>Enter</kbd></td>
+    <td><samp>→ 开始冒险</samp></td>
+  </tr>
+  <tr>
+    <td align="right"><samp>标题画面</samp></td>
+    <td><kbd>Esc</kbd></td>
+    <td><samp>→ 关上大门</samp></td>
+  </tr>
+  <tr>
+    <td align="right"><samp>游戏中</samp></td>
+    <td><kbd>Esc</kbd></td>
+    <td><samp>→ 暂停休息</samp></td>
+  </tr>
+  <tr>
+    <td align="right"><samp>菜单内</samp></td>
+    <td><kbd>Esc</kbd></td>
+    <td><samp>→ 回到故事</samp></td>
+  </tr>
+</table>
+
+<br />
 
 ---
+
+<br />
+
+<div align="center">
+
+## <samp>🏗️ 引擎的小心脏</samp>
+
+</div>
+
+<br />
+
+```
+   📜 剧本 JSON
+        │
+        ▼
+  ⚙️ ScriptEngine ──▶ 🧠 Zustand Store ◀── 🎨 React 组件
+        │                      │
+        │               💾 SaveManager
+        │                      │
+        ▼                      ▼
+   📖 解释执行           🗄️ 本地文件系统
+```
+
+<br />
 
 <p align="center">
   <samp>
-    built with ♡ and <a href="https://react.dev">React</a> · <a href="https://www.electronjs.org">Electron</a> · <a href="https://github.com/pmndrs/zustand">Zustand</a>
+    <b>阻塞模型：</b>批量指令一口气跑完，遇到对话就乖乖等你戳一下。
   </samp>
 </p>
 
+<br />
+
+---
+
+<br />
+
+<div align="center">
+
+## <samp>💌 致创作者</samp>
+
+</div>
+
+<br />
+
+<p align="center">
+  <samp>
+    这是一个小小的引擎，不完美，但足够真诚。<br />
+    如果你用它做出了什么有趣的东西，<br />
+    请一定让我知道。
+  </samp>
+</p>
+
+<br />
+
+<div align="center">
+
+<p>
+  <samp>· • ✦ 期待你的故事 ✦ • ·</samp>
+</p>
+
+<br />
+
+<a href="https://github.com/Glimmer114514/fragence_engine">
+  <img src="assets/mascot.jpg" width="140" alt="mascot" />
+</a>
+
+<br />
+<br />
+
+<p>
+  <sub>
+    <samp>
+      crafted with ♡ · <a href="https://react.dev">React</a> · <a href="https://www.electronjs.org">Electron</a> · <a href="https://github.com/pmndrs/zustand">Zustand</a>
+    </samp>
+  </sub>
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/🌸_MIT-b7a08e?style=flat-square&labelColor=faf5f0" alt="MIT" />
+</p>
+
+</div>
+
+<br />
 <br />
