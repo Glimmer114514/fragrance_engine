@@ -1,0 +1,2386 @@
+[
+  {
+    "type": "scene",
+    "id": "start"
+  },
+  {
+    "type": "bgm",
+    "src": "daily_theme",
+    "loop": true,
+    "volume": 0.4
+  },
+  {
+    "type": "scene",
+    "id": "ch1_opening"
+  },
+  {
+    "type": "narration",
+    "text": "九月的南方大学，桂花初绽。校园里弥漫着一种淡淡的花香，甜而不腻，若有若无。"
+  },
+  {
+    "type": "narration",
+    "text": "我拖着一个半旧的行李箱，在宿舍楼前停了下来。新的城市，新的学校，新的开始——一切陌生得让人心跳加速。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "???",
+    "text": "同学，需要帮忙吗？"
+  },
+  {
+    "type": "narration",
+    "text": "一个扎着马尾的女生从身后走近，笑容爽朗得像是认识了很久的朋友。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "周明悦",
+    "text": "你好呀！我叫周明悦，也是新生，就住你隔壁宿舍。我看你一个人拖着这么大个箱子，要不要搭把手？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "啊……谢谢，那就麻烦你了。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "周明悦",
+    "text": "不客气！以后就是室友了嘛——虽然不是同一间房，但隔壁也算。有什么需要尽管找我！"
+  },
+  {
+    "type": "scene",
+    "id": "ch1_campus"
+  },
+  {
+    "type": "narration",
+    "text": "安顿好行李之后，宿舍里只剩下我一个人。窗外，夕阳正把校园染成一片金色。我决定出去走一走，熟悉一下这个即将生活四年的地方。"
+  },
+  {
+    "type": "bg",
+    "src": "campus_path",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "校园比想象中要大。我沿着林荫道慢慢走着，路旁的桂树正开得繁盛。金色的花瓣细细碎碎地落在地上，像是铺了一层薄薄的地毯。"
+  },
+  {
+    "type": "narration",
+    "text": "走到桂花园附近的时候，我注意到一个人蹲在地上，正举着相机对准什么。她按下快门的动作很轻，像是怕惊扰了什么东西似的。"
+  },
+  {
+    "type": "scene",
+    "id": "ch1_first_meet"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "normal",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "narration",
+    "text": "那是第一次见到林晓雨。阳光透过桂树的间隙洒在她身上，栗色的中长发在风里轻轻晃动。她没有注意到我，专注地调整着手中的相机。"
+  },
+  {
+    "type": "narration",
+    "text": "我站在原地，不知道该不该出声打扰她。就在这时，她仿佛感觉到了什么，抬起了头。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "啊……不好意思，我是不是挡到路了？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "没有没有，我只是……看到你在拍照，有点好奇。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（笑了笑，眼睛弯成月牙）我在拍这些落在地上的桂花。你不觉得吗？落在地上的花其实也很好看——它们不像树上的那样热闹，但有一种安静的温柔。"
+  },
+  {
+    "type": "narration",
+    "text": "她说这话的时候，眼神很认真。我意识到，她不是在随便拍拍——她是真的喜欢这些东西。"
+  },
+  {
+    "type": "scene",
+    "id": "ch1_choice_router"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.week2",
+    "then": "choice_c1_high"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c1_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c1_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c1_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch1_dorm"
+  },
+  {
+    "type": "scene",
+    "id": "c_c1_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch1_dorm"
+  },
+  {
+    "type": "scene",
+    "id": "c_c1_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch1_dorm"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 你拍的桂花很好看，能发给我看看吗？",
+        "next": {
+          "type": "jump",
+          "target": "c_c1_low_A"
+        }
+      },
+      {
+        "text": "B. 这里光线真好，很适合拍照呢。",
+        "next": {
+          "type": "jump",
+          "target": "c_c1_low_B"
+        }
+      },
+      {
+        "text": "C. 只是微笑着点点头。",
+        "next": {
+          "type": "jump",
+          "target": "c_c1_low_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c1_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c1_high_D"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch1_dorm"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "D. 桂花落了满地，像淡紫色的星星呢。",
+        "next": {
+          "type": "jump",
+          "target": "c_c1_high_D"
+        },
+        "cond": "flags.week2"
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch1_dorm"
+  },
+  {
+    "type": "narration",
+    "text": "晚上回到宿舍，我刚关上房门，门外就响起了敲门声。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "周明悦",
+    "text": "在吗在吗？今天有没有遇到什么好玩的事？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "你消息也太灵通了吧……"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "周明悦",
+    "text": "（探头进来，眼睛放光）当然！作为你在这栋楼里认识的第一个人，我有责任关心你的人际交往状况！快，说说看。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "也没什么事……就是在桂花园遇到了一个女生，她在拍落花。挺特别的人。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "周明悦",
+    "text": "（想了一下）哦！你说的该不会是新闻系那个林晓雨吧？她很会拍照的，听说还在学院拿过奖呢。"
+  },
+  {
+    "type": "narration",
+    "text": "原来她已经小有名气了。不知为什么，心里有一种说不清的感觉——好奇，还是期待？我不知道。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "（内心）第一次有了一种想要更多了解一个人的心情。"
+  },
+  {
+    "type": "jump",
+    "target": "ch1_converge"
+  },
+  {
+    "type": "scene",
+    "id": "ch1_converge"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 3",
+    "then": "ch2_start_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 1",
+    "then": "ch2_start_mid"
+  },
+  {
+    "type": "jump",
+    "target": "ch2_start_low"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_start_low"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch2_opening"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_start_mid"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch2_opening"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_start_high"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch2_opening"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_opening"
+  },
+  {
+    "type": "bg",
+    "src": "campus_booth",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "开学第一周，社团招新日。操场上搭满了各色帐篷，到处是招揽新生的吆喝声和欢笑声。"
+  },
+  {
+    "type": "narration",
+    "text": "我本来打算直奔文学社的摊位。对于中文系的我来说，那是再自然不过的选择。但在路过摄影社的摊位时，我停下了脚步——林晓雨正站在不远处，看着摄影社的招牌，脸上有一种犹豫的神情。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "林晓雨？好巧，又遇到你了。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（回过神来，脸上露出一个不太确定的笑容）啊，你好。我……正在想要不要加入摄影社。但又觉得，自己一个人在这群人里面，是不是有点奇怪。"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_choice_router"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 3",
+    "then": "choice_c2_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 1",
+    "then": "choice_c2_mid"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c2_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c2_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_low_D"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 我们一起去看看文学社吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_low_A"
+        }
+      },
+      {
+        "text": "B. 你在犹豫什么？要不要一起加入摄影社啊？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_low_B"
+        }
+      },
+      {
+        "text": "C. 我也想报很多社团呢，好难选。",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_low_C"
+        }
+      },
+      {
+        "text": "D. 我听说新闻系那边有个摄影很棒的人，该不会就是你吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_low_D"
+        },
+        "cond": "flags.week2"
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c2_mid"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_mid_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_mid_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_mid_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_mid_D"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 我们一起去看看文学社吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_mid_A"
+        }
+      },
+      {
+        "text": "B. 你在犹豫什么？要不要一起加入摄影社啊？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_mid_B"
+        }
+      },
+      {
+        "text": "C. 我也想报很多社团呢，好难选。",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_mid_C"
+        }
+      },
+      {
+        "text": "D. 我听说新闻系那边有个摄影很棒的人，该不会就是你吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_mid_D"
+        },
+        "cond": "flags.week2"
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c2_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_high_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_high_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_high_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "scene",
+    "id": "c_c2_high_D"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch2_canteen"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 我们一起去看看文学社吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_high_A"
+        }
+      },
+      {
+        "text": "B. 你在犹豫什么？要不要一起加入摄影社啊？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_high_B"
+        }
+      },
+      {
+        "text": "C. 我也想报很多社团呢，好难选。",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_high_C"
+        }
+      },
+      {
+        "text": "D. 我听说新闻系那边有个摄影很棒的人，该不会就是你吧？",
+        "next": {
+          "type": "jump",
+          "target": "c_c2_high_D"
+        },
+        "cond": "flags.week2"
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch2_canteen"
+  },
+  {
+    "type": "bg",
+    "src": "canteen",
+    "effect": "fade"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "happy",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "narration",
+    "text": "社团活动结束后，已经过了午饭时间。食堂里的人不多，阳光从大窗户斜斜地照进来，把桌面染成了暖橙色。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "谢谢你刚才陪我，我一个人真的会在那里站很久。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "其实我也想加入社团，正好一起。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（低头喝了一口汤，然后抬起头）你知道我为什么喜欢拍照吗？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "为什么？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "因为我想留住那些会消失的东西——花会谢，晚霞会散，季节会过去。但照片能把这些瞬间留很久很久。"
+  },
+  {
+    "type": "narration",
+    "text": "她说这话的时候，眼睛里有光。那种光，不是太阳的反射，而是从心底透出来的。我忽然觉得自己好像被什么东西轻轻撞了一下。"
+  },
+  {
+    "type": "jump",
+    "target": "ch2_to_ch3_router"
+  },
+  {
+    "type": "scene",
+    "id": "ch2_to_ch3_router"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 5",
+    "then": "choice_c3_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 2",
+    "then": "choice_c3_mid"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c3_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c3_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 下次我们一起去拍吧，我也想学学摄影。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_low_A"
+        }
+      },
+      {
+        "text": "B. 我最近在读一本书，里面也提到了摄影，推荐给你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_low_B"
+        }
+      },
+      {
+        "text": "C. 食堂的红烧肉还挺好吃的……",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_low_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c3_mid"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_mid_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_mid_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_mid_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 下次我们一起去拍吧，我也想学学摄影。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_mid_A"
+        }
+      },
+      {
+        "text": "B. 我最近在读一本书，里面也提到了摄影，推荐给你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_mid_B"
+        }
+      },
+      {
+        "text": "C. 食堂的红烧肉还挺好吃的……",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_mid_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c3_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_high_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 7
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_high_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 6
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "scene",
+    "id": "c_c3_high_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 下次我们一起去拍吧，我也想学学摄影。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_high_A"
+        }
+      },
+      {
+        "text": "B. 我最近在读一本书，里面也提到了摄影，推荐给你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_high_B"
+        }
+      },
+      {
+        "text": "C. 食堂的红烧肉还挺好吃的……",
+        "next": {
+          "type": "jump",
+          "target": "c_c3_high_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch3_library"
+  },
+  {
+    "type": "bg",
+    "src": "library",
+    "effect": "fade"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "normal",
+    "pos": "right",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "narration",
+    "text": "期中考试前夕，图书馆里到处都是埋头苦读的身影。我找了个靠墙的座位坐下，翻开了厚厚的文学概论。"
+  },
+  {
+    "type": "narration",
+    "text": "抬起头的时候，我看到了一个熟悉的身影——林晓雨坐在靠窗的位置，面前摆着一本厚厚的摄影集。她偶尔在本子上写着什么，阳光从窗缝里溜进来，在她的侧脸画出柔和的轮廓。"
+  },
+  {
+    "type": "narration",
+    "text": "我盯着自己面前的书，却一个字也看不进去。要不要过去？会不会打扰她？如果她并不想被打扰呢？"
+  },
+  {
+    "type": "jump",
+    "target": "ch3_lib_converge"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_lib_converge"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 7",
+    "then": "choice_c4_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 3",
+    "then": "choice_c4_mid"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c4_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c4_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 走过去坐在她旁边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_low_A"
+        }
+      },
+      {
+        "text": "B. 不去打扰她，但给她买了一杯咖啡放在桌边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_low_B"
+        }
+      },
+      {
+        "text": "C. 远远地看了一眼，继续自己的自习。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_low_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c4_mid"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_mid_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_mid_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_mid_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 走过去坐在她旁边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_mid_A"
+        }
+      },
+      {
+        "text": "B. 不去打扰她，但给她买了一杯咖啡放在桌边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_mid_B"
+        }
+      },
+      {
+        "text": "C. 远远地看了一眼，继续自己的自习。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_mid_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c4_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_high_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 8
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_high_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 9
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c4_high_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 7
+  },
+  {
+    "type": "jump",
+    "target": "ch3_library_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 走过去坐在她旁边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_high_A"
+        }
+      },
+      {
+        "text": "B. 不去打扰她，但给她买了一杯咖啡放在桌边。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_high_B"
+        }
+      },
+      {
+        "text": "C. 远远地看了一眼，继续自己的自习。",
+        "next": {
+          "type": "jump",
+          "target": "c_c4_high_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch3_library_result"
+  },
+  {
+    "type": "narration",
+    "text": "晓雨正在做的摄影企划——她想拍一组「校园的四季」。春天的花，夏天的雨，秋天的落叶，冬天的初雪。她说，这是她给自己定的小目标。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你觉得这个想法怎么样？会不会太幼稚了？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "不会。我觉得很好。能有一个想表达的东西，本身就是很难得的事。"
+  },
+  {
+    "type": "narration",
+    "text": "她笑了笑，低头继续在本子上写字。那个笑容，和我第一次在桂花园看到她的时候一样温柔。"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_rain"
+  },
+  {
+    "type": "bg",
+    "src": "campus_rain",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "几天后的傍晚，天空突然变暗，豆大的雨点毫无预兆地砸了下来。我站在教学楼的门口，看着密集的雨幕叹了口气——早上出门太急，忘了带伞。"
+  },
+  {
+    "type": "narration",
+    "text": "身后传来脚步声，一把浅蓝色的伞从身后伸了过来。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "一起走吧？"
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_converge"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_rain_converge"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 9",
+    "then": "choice_c5_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 5",
+    "then": "choice_c5_mid"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c5_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c5_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 0
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 谢谢你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_low_A"
+        }
+      },
+      {
+        "text": "B. 好巧啊，我正愁没伞呢。送你回宿舍吧？（玩笑语气）",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_low_B"
+        }
+      },
+      {
+        "text": "C. 不用了，我再等一会儿就好。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_low_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c5_mid"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_mid_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 6
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_mid_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 7
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_mid_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 谢谢你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_mid_A"
+        }
+      },
+      {
+        "text": "B. 好巧啊，我正愁没伞呢。送你回宿舍吧？（玩笑语气）",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_mid_B"
+        }
+      },
+      {
+        "text": "C. 不用了，我再等一会儿就好。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_mid_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c5_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_high_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 10
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_high_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 11
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c5_high_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 9
+  },
+  {
+    "type": "jump",
+    "target": "ch3_rain_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 谢谢你。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_high_A"
+        }
+      },
+      {
+        "text": "B. 好巧啊，我正愁没伞呢。送你回宿舍吧？（玩笑语气）",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_high_B"
+        }
+      },
+      {
+        "text": "C. 不用了，我再等一会儿就好。",
+        "next": {
+          "type": "jump",
+          "target": "c_c5_high_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch3_rain_result"
+  },
+  {
+    "type": "narration",
+    "text": "两人并肩走在雨中，她的步伐不快不慢，伞不怎么大，她悄悄地把伞往我这边偏了一些。"
+  },
+  {
+    "type": "narration",
+    "text": "那一小段回宿舍的路，安静而温暖。雨水打在伞面上的声音，像是一首没有词但很好听的歌。"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_cafe"
+  },
+  {
+    "type": "bg",
+    "src": "cafe",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "「桂香小馆」是晓雨最喜欢的地方。店面不大，藏在校园旁边一条安静的小巷里。店主是一位和蔼的中年女性，店里还有一只叫团子的橘猫。"
+  },
+  {
+    "type": "narration",
+    "text": "阳光透过木格窗洒在原木色的桌面上。团子正趴在窗台上打盹，偶尔甩一下尾巴。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（熟练地翻开菜单）这里抹茶千层蛋糕超好吃的，你一定要试试。"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "happy",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "narration",
+    "text": "蛋糕端上来的时候，她先把第一口推到了我面前。绿色的抹茶粉均匀地铺在上面，奶油的纹理细腻得像一幅画。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "好吃，真的。"
+  },
+  {
+    "type": "narration",
+    "text": "我们聊了很多——关于梦想、关于大学、关于那些藏在心底的微小愿望。窗外开始下起了小雨，窗户上慢慢浮现出一层薄薄的水雾。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（看着窗外，声音很轻）你知道吗……我其实有一个藏在心底的愿望。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "什么愿望？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（回过头，眼睛里有光）我想在学校办一次个人摄影展。不是什么很大的展——就是在图书馆的大厅，或者社团的展览室，把我拍的「校园的四季」挂起来，让大家看到。"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_cafe_choice_router"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.week2",
+    "then": "choice_c7"
+  },
+  {
+    "type": "jump",
+    "target": "ch3_cafe_continue"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c7"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "D. 我帮你一起实现吧。",
+        "next": {
+          "type": "jump",
+          "target": "c7_D"
+        }
+      },
+      {
+        "text": "……（默然倾听）",
+        "next": {
+          "type": "jump",
+          "target": "ch3_cafe_continue"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "c7_D"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 12
+  },
+  {
+    "type": "jump",
+    "target": "ch3_cafe_continue"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_cafe_continue"
+  },
+  {
+    "type": "narration",
+    "text": "晓雨愣了一下。她眨了眨眼睛，眼眶微微有些发红。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（声音有点哑）……你是第一个认真地说这句话的人。"
+  },
+  {
+    "type": "narration",
+    "text": "团子从窗台上跳了下来，蹭了蹭我的脚踝。我低下头，掩饰自己不知为什么也涌上来的酸涩感。"
+  },
+  {
+    "type": "jump",
+    "target": "ch3_converge"
+  },
+  {
+    "type": "scene",
+    "id": "ch3_converge"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 8",
+    "then": "ch4_start_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 4",
+    "then": "ch4_start_mid"
+  },
+  {
+    "type": "jump",
+    "target": "ch4_start_low"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_start_low"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_start_mid"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_start_high"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 8
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_gossip"
+  },
+  {
+    "type": "bg",
+    "src": "hallway",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "深秋的某个午后，我路过教学楼走廊，无意间听到了几句对话。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "同学A",
+    "text": "你们有没有觉得林晓雨有点……怎么说呢，不太合群？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "同学B",
+    "text": "是啊，总是独来独往的，也不怎么参加集体活动。拍照而已，搞得多有追求一样。"
+  },
+  {
+    "type": "narration",
+    "text": "她们笑了一下，那种笑声让人很不舒服。我站在原地，胸口涌上一股说不上是愤怒还是难过的情绪。"
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_converge"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_gossip_converge"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 8",
+    "then": "choice_c6_high"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 4",
+    "then": "choice_c6_mid"
+  },
+  {
+    "type": "jump",
+    "target": "choice_c6_low"
+  },
+  {
+    "type": "scene",
+    "id": "choice_c6_low"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_low_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 2
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_low_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 3
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_low_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 1
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 直接上前为晓雨辩护。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_low_A"
+        }
+      },
+      {
+        "text": "B. 事后去找晓雨，告诉她不管别人怎么说，自己都很喜欢和她在一起。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_low_B"
+        }
+      },
+      {
+        "text": "C. 装作没听到，但之后对晓雨更加关心。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_low_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c6_mid"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_mid_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 5
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_mid_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 6
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_mid_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 4
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 直接上前为晓雨辩护。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_mid_A"
+        }
+      },
+      {
+        "text": "B. 事后去找晓雨，告诉她不管别人怎么说，自己都很喜欢和她在一起。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_mid_B"
+        }
+      },
+      {
+        "text": "C. 装作没听到，但之后对晓雨更加关心。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_mid_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "choice_c6_high"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_high_A"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 9
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_high_B"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 10
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "scene",
+    "id": "c_c6_high_C"
+  },
+  {
+    "type": "setFlag",
+    "key": "affection",
+    "value": 8
+  },
+  {
+    "type": "jump",
+    "target": "ch4_gossip_result"
+  },
+  {
+    "type": "choice",
+    "prompt": "",
+    "options": [
+      {
+        "text": "A. 直接上前为晓雨辩护。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_high_A"
+        }
+      },
+      {
+        "text": "B. 事后去找晓雨，告诉她不管别人怎么说，自己都很喜欢和她在一起。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_high_B"
+        }
+      },
+      {
+        "text": "C. 装作没听到，但之后对晓雨更加关心。",
+        "next": {
+          "type": "jump",
+          "target": "c_c6_high_C"
+        }
+      }
+    ]
+  },
+  {
+    "type": "scene",
+    "id": "ch4_gossip_result"
+  },
+  {
+    "type": "narration",
+    "text": "我走上前去，声音比自己预想的要稳。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "林晓雨是很好的人。你们不了解她，但不了解就不要随便议论。"
+  },
+  {
+    "type": "narration",
+    "text": "她们有些尴尬地离开了。后来晓雨知道了这件事，那天晚上，她给我发了一条很长的消息。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "谢谢你。真的。有时候我也会怀疑自己——是不是真的不太合群？但你让我觉得，做自己也没有关系。"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_semester_end"
+  },
+  {
+    "type": "bg",
+    "src": "campus_winter",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "第一学期即将结束。桂花的季节已经过去了，校园里的树大多只剩干枯的枝丫，等待着来年的春天。"
+  },
+  {
+    "type": "narration",
+    "text": "我和晓雨一起在校园里散步。半年的时间过得很快，快得让人来不及细数——但每一次相遇、每一次交谈、每一次沉默的陪伴，都还那么清晰。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（呼出一口白气）这半年……谢谢你。虽然不是什么了不起的事，但每一次和你在一起的时候，我都觉得很安心。"
+  },
+  {
+    "type": "narration",
+    "text": "风从远处吹来，带着冬天特有的清冷。她把围巾往上拉了一点，遮住了半张脸，只露出一双弯弯的眼睛。"
+  },
+  {
+    "type": "scene",
+    "id": "ch4_ending_router"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.week2 && flags.affection >= 12",
+    "then": "ending_hidden"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 8",
+    "then": "ending_bestfriend"
+  },
+  {
+    "type": "branch",
+    "cond": "flags.affection >= 5",
+    "then": "ending_fellow"
+  },
+  {
+    "type": "jump",
+    "target": "ending_playmate"
+  },
+  {
+    "type": "scene",
+    "id": "ending_playmate"
+  },
+  {
+    "type": "bg",
+    "src": "campus_winter_snow",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "寒假前的最后一天，校园比平时冷清了许多。我在校门口遇到了晓雨。"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "normal",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你要回家了吗？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "嗯，明天早上的车。你呢？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "我也是。那……新学期见。"
+  },
+  {
+    "type": "narration",
+    "text": "她朝我挥了挥手，笑容和秋天初见时一样温柔。冬日的阳光洒在她身上，把栗色的头发染成了浅金色。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "这学期很高兴认识你。真的。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "我也是。"
+  },
+  {
+    "type": "narration",
+    "text": "我们之间的对话不算多，每一次相遇却都是真实而温暖的。或许不是最好的朋友——我们各自有各自的圈子，各自过各自的日子。但在需要的时候，我们知道彼此会在那里。"
+  },
+  {
+    "type": "narration",
+    "text": "我目送她走远，直到她的背影消失在校园小径的转弯处。桂花树的枝头挂着少许积雪，在阳光下折射出细碎的光。"
+  },
+  {
+    "type": "narration",
+    "text": "我们或许不是每天都见面的那种朋友，但我们都知道，在对方需要的时候，自己会在那里。这就够了。"
+  },
+  {
+    "type": "narration",
+    "text": "有些友谊就像冬天的阳光——不那么炽热，却格外温暖。"
+  },
+  {
+    "type": "narration",
+    "text": "新学期开学的时候，我在校门口又看到了她。她朝我笑着挥了挥手，就像那个冬天告别时一样。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "新年好呀！"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "新年好。"
+  },
+  {
+    "type": "narration",
+    "text": "一切都还是原来的样子。一切都刚刚好。"
+  },
+  {
+    "type": "end"
+  },
+  {
+    "type": "scene",
+    "id": "ending_fellow"
+  },
+  {
+    "type": "bg",
+    "src": "campus_winter_snow",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "寒假前，晓雨邀请我一起去拍「校园的冬天」。空无一人的校园里，我们沿着落满枯叶的小路慢慢地走着。"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "happy",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你看这里——从这个角度拍过去，构图是不是很好？把树枝放在画面的三分之一位置，然后用天空做背景……"
+  },
+  {
+    "type": "narration",
+    "text": "她认真地给我讲着构图——三分法、对角线、框架。有些专业术语我其实没听懂，但她比划着手势的样子太过认真，我不忍心打断。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "你真的很喜欢摄影。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "嗯。因为你愿意听我说这些……所以我就忍不住多说了一点。"
+  },
+  {
+    "type": "narration",
+    "text": "她说这话的时候，声音比平时轻了一些，像是怕说得太大声会把什么打破似的。"
+  },
+  {
+    "type": "bg",
+    "src": "library",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "后来，我们经常一起去图书馆。不是约好的那种——只是不知道从什么时候开始，我习惯性地会看一眼靠窗的那个座位，而她也习惯性地会在旁边给我留一个位置。"
+  },
+  {
+    "type": "narration",
+    "text": "桌上放着两杯冒着热气的咖啡。窗外的雪花安静地飘落。整个下午，我们几乎不说话——各自沉浸在自己的世界里。但那种沉默并不尴尬。它很安静，很自然，像呼吸一样。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（从书页间抬起头）有时候我觉得，能和一个不说话也不觉得尴尬的人待在一起，是一件很幸运的事。"
+  },
+  {
+    "type": "narration",
+    "text": "我点点头。她说出了我心里一直在想、却一直没有说出口的话。"
+  },
+  {
+    "type": "narration",
+    "text": "有一个能分享热爱的人，是多么幸运的事。"
+  },
+  {
+    "type": "narration",
+    "text": "这种关系不需要任何承诺，不需要任何定义——它自然地存在着，像呼吸一样轻松。"
+  },
+  {
+    "type": "narration",
+    "text": "寒假的时候，她给我发了一张照片，是在老家拍的雪景。照片底部配了一行字——"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "等你回来，一起去拍春天吧。"
+  },
+  {
+    "type": "narration",
+    "text": "我笑着把这张照片设置成了手机壁纸。春天——听起来真好。"
+  },
+  {
+    "type": "end"
+  },
+  {
+    "type": "scene",
+    "id": "ending_bestfriend"
+  },
+  {
+    "type": "bg",
+    "src": "rooftop_sunset",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "学期末的时候，我们几乎形影不离。一起复习、一起吃饭、一起在咖啡店度过无数个下午。桂香小馆的老板已经记住了我们俩的口味。连团子都会在我们进门的时候抬起头看一眼，像是在说——「又是你们啊」。"
+  },
+  {
+    "type": "narration",
+    "text": "那天傍晚，晓雨约我到天台。风有点大，但夕阳很美。她把围巾解下来，一半搭在我的肩上。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（望着远处的夕阳，沉默了很久）我以前觉得，大学里能找到一个聊得来的人就不错了。但我没想到……会遇到你这样的人。"
+  },
+  {
+    "type": "narration",
+    "text": "她说了一些从未对人说过的心里话——关于她的家庭、她的梦想、她的不安。声音很轻，像是怕说重了就会哭出来。她说到一半的时候，抬头看了我一眼，右眼角那颗小小的泪痣在夕阳下显得格外清晰。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你是第一个让我觉得——可以不用假装强大的人。"
+  },
+  {
+    "type": "narration",
+    "text": "风把她的碎发吹起来，我把它们轻轻拨到了她耳后。夕阳悬在地平线上，像一个坠子，缓慢而美丽地冷却下去。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "我也是。在你面前，我可以不用是其他任何样子——只需要是我自己就好。"
+  },
+  {
+    "type": "narration",
+    "text": "之后的一个午后，我们依旧去了桂香小馆。窗外飘着细密的雪花。团子蜷缩在暖气旁边的专属座位上打呼噜，店里播着一首听不出名字的钢琴曲。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你知道吗，其实有时候我觉得……我们之间的关系好像没有一个确切的名字。但又觉得——也不需要。你懂吗？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "我懂。"
+  },
+  {
+    "type": "narration",
+    "text": "她轻轻地把头靠在了我的肩上。我们都没有再说话。但那个黄昏，是我人生中度过的最温暖的冬天。"
+  },
+  {
+    "type": "narration",
+    "text": "我不知道这算什么。朋友？知己？还是别的什么？"
+  },
+  {
+    "type": "narration",
+    "text": "但似乎，也不需要知道。有些关系不需要被定义。"
+  },
+  {
+    "type": "narration",
+    "text": "重要的是，在我所有的「重要时刻」，你都在。在你所有的「需要陪伴」的瞬间，我也都在。"
+  },
+  {
+    "type": "narration",
+    "text": "我们之间不需要刻意的告白，不需要关系的标签。我们只是——在一起。安静地、自然地、温暖地在一起。"
+  },
+  {
+    "type": "end"
+  },
+  {
+    "type": "scene",
+    "id": "ending_hidden"
+  },
+  {
+    "type": "bg",
+    "src": "dorm_night",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "一个打雷的夜晚。窗外的闪电把房间照得忽明忽暗，紧接着就是震耳欲聋的雷声。"
+  },
+  {
+    "type": "narration",
+    "text": "我知道晓雨害怕打雷——在第一次的某个雨天，她曾经缩在伞下，假装没事地说了一句「其实我有点怕打雷」。那时候我没有太在意。但现在，这句话忽然在脑海中变得异常清晰。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "（盯着手机屏幕上的对话框）你还好吗？打雷了。"
+  },
+  {
+    "type": "narration",
+    "text": "回复来得很慢。三分钟？五分钟？屏幕上终于出现了一行字。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "没事……就是有点睡不着。"
+  },
+  {
+    "type": "narration",
+    "text": "我看了一眼窗外，雨大得几乎看不清对面宿舍楼的灯光。深吸了一口气，拿起伞，推开了门。"
+  },
+  {
+    "type": "bg",
+    "src": "dorm_downstairs",
+    "effect": "fade"
+  },
+  {
+    "type": "narration",
+    "text": "宿舍楼下的休息室里，她裹着睡衣蜷在沙发一角。看到我的时候，她的表情从惊讶变成了另一种说不清的情绪——像是松了一口气，又像是快哭出来。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你怎么来了……"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "因为我知道你肯定不是「没事」。"
+  },
+  {
+    "type": "narration",
+    "text": "她咬着嘴唇，眼眶很快就红了。不是因为害怕——是因为感动。"
+  },
+  {
+    "type": "narration",
+    "text": "我们在休息室里坐了一整夜。雨声渐渐小了，雷声也不再响起。她靠在我的肩上，呼吸慢慢变得平稳。天色快亮的时候，她说了一句——"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "谢谢你记得。谢谢你来了。"
+  },
+  {
+    "type": "bg",
+    "src": "campus_spring",
+    "effect": "fade"
+  },
+  {
+    "type": "char",
+    "id": "xiaoyu",
+    "pose": "happy",
+    "pos": "center",
+    "effect": "fadeIn"
+  },
+  {
+    "type": "narration",
+    "text": "春天，桂花园里。桂花已经落了，但空气中似乎仍残留着淡淡的、挥之不去的香气。阳光透过新绿的树叶，在两人身上洒下斑驳的光影。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "你还记得我们第一次见面吗？就是在这里——我在拍落花。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "当然记得。你说落在地上的花，有安静的温柔。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（笑了一下，眼睛弯成月牙）那你现在，有没有闻到什么味道？"
+  },
+  {
+    "type": "narration",
+    "text": "我闭上眼睛。桂花早就谢了，但那种香气——淡而不散，甜而不腻——依然漂浮在空气里。"
+  },
+  {
+    "type": "narration",
+    "text": "后来我才明白——那不是桂花。那是她。是她洗发水的味道，是她笑起来时空气里弥漫的气息，是我们一起走过的每一个日子沉淀下来的记忆。"
+  },
+  {
+    "type": "narration",
+    "text": "再后来，她真的在学校图书馆里举办了那场摄影展。我帮她把照片一张一张地挂起来，从春天到冬天，从桂花的金黄到初雪的白。开展那天，她站在展厅中央，眼睛里的光比任何一盏聚光灯都要亮。"
+  },
+  {
+    "type": "narration",
+    "text": "展览的最后一面墙上，挂着一张照片。是我没有见过的——那是秋天的一个黄昏，我站在桂花园里，抬着头在看桂花。阳光从我身后照过来，在镜头里画出了一个温柔的剪影。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "（从身后走过来，声音很轻）这是我最好的一张照片。"
+  },
+  {
+    "type": "narration",
+    "text": "我转过身。她站在我面前，右眼角那颗泪痣依然清晰，头发比秋天时长了一些，笑容和第一次见面时一样温柔。窗外，又是一年秋天。桂花正开。香气弥漫在空气里，经久不去。"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "我",
+    "text": "在想什么？"
+  },
+  {
+    "type": "dialogue",
+    "speaker": "林晓雨",
+    "text": "在想你。"
+  },
+  {
+    "type": "narration",
+    "text": "她笑了。那个笑容，是我见过的最美的东西。也许有一天，我会用一个词来定义这种感觉。但现在，我只想享受这一刻——和她在一起，在馥郁的香气中，在永不褪色的记忆里。"
+  },
+  {
+    "type": "narration",
+    "text": "有些香气，不会随风散去。"
+  },
+  {
+    "type": "narration",
+    "text": "它会留在记忆里——在每一个不经意的瞬间，悄然绽放。就像此时，就像此刻。"
+  },
+  {
+    "type": "end"
+  }
+]
